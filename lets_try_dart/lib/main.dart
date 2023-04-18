@@ -1,20 +1,20 @@
-import 'package:flutter/material.dart';
+
 
 void main() {
-  runApp(const MainApp());
+  const list = ['fruits', 'apples', 'bananas', 'oranges'];
+  list.map((item) {
+    return item.toUpperCase();
+  }).forEach((item) {
+    print('$item: ${item.length}');
+  });
+
+
+
+/*
+list
+    .map((item) => item.toUpperCase())
+    .forEach((item) => print('$item: ${item.length}'));
+*/
+
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
-  }
-}
